@@ -10,7 +10,7 @@ function makeShop(shopName, minCusts, maxCusts, avgPerCust) {
     maxCusts: maxCusts,
     avgPerCust: avgPerCust,
 
-    //TODO This function probably needs work to generate more accurate results. Math.random can be pretty 0-100
+    //TODO This function probably needs work to generate more accurate results. Math.random can be pretty 0-100, quite literally
     custsPerHour: function (timeOfDay) {
       timeOfDay %= 24;
       if (timeOfDay < 5 || timeOfDay > 19) {

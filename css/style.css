@@ -1,10 +1,10 @@
-/* It should be noted that I HATE the rgb(r, g, b) format!
-I've got no idea why the creators of the color-picker plugin
-decided to make it the default, when #ffffff is much cleaner...*/
 body {
   background-color: #36342B;
   color: #D0C9C2;
 }
+/*Stupid clearfix...
+  "Magic" solutions are
+  the bane of my existence...*/
 .clearfix::after {
   content: "";
   clear: both;
@@ -13,20 +13,23 @@ body {
 header {
   overflow: hidden;
   margin: auto;
-  background: linear-gradient(#BC4C34, #A46845);
+  background: linear-gradient(#BC4C34, #36342B);
 }
 header a.logo {
   float: left;
   max-width: 66%;
   text-decoration: none;
+  padding: 1%;
 }
 header p#info {
+  padding: 1%;
+  font-size: 1vw;
   float: left;
   text-align: justify;
   overflow: hidden;
 }
 footer {
-  padding: 1.5%;
+  padding: 1%;
   background: linear-gradient(#C6915D, #A46845);
   position: fixed;
   left: 0;
@@ -42,25 +45,44 @@ header a h1 {
   color: #D0C9C2;
 }
 img.logo {
-  max-width: 12.5%;
-  max-height: 12.5%;
+  max-width: 20%;
+  max-height: 20%;
+  padding-right: 1%;
 }
-body section#notifications article header {
-  border-radius: 15px;
+body section header {
+  background: linear-gradient(#BC4C34, #A46845);
 }
-body section#notifications article {
+body section article {
   text-align: justify;
-  border: 3px solid #D0C9C2;
-  border-radius: 15px;
-  box-shadow: 0 0 5px #C6915D;
+  border: 2px solid #BC4C34;
+  background-color: #D0C9C2;
+  color: #36342B;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #C6915D;
+}
+body section article header {
+  color: #D0C9C2;
+  border-radius: 15px 15px 0 0;
+  border-bottom: 2px solid #BC4C34;
+  padding: 3px;
+  padding-bottom: 5px;
+  font-size: 2em;
+  text-align: center;
+}
+body section article p {
+  padding: 2%;
 }
 body section#notifications {
   float: left;
-  width: 31%;
-  padding: 1%;
+  width: 30%;
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-right: 1.5%;
 }
 body section#menu {
   float: left;
-  padding: 1%;
-  width: 65%;
+  padding-top: 3%;
+  padding-right: 3%;
+  padding-left: 1.5%;
+  width: 60%;
 }
