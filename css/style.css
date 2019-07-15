@@ -2,53 +2,65 @@
 I've got no idea why the creators of the color-picker plugin
 decided to make it the default, when #ffffff is much cleaner...*/
 body {
-  background-color: rgb(5, 5, 5);
-  color: rgb(255, 255, 255);
+  background-color: #36342B;
+  color: #D0C9C2;
 }
-h1 {
-  font-size: 300%;
-  text-align: center;
-  color: rgb(87, 206, 81);
-}
-h2 {
-  color: rgb(24, 245, 83);
-  font-size: 200%;
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 header {
-  background-color: rgb(31, 31, 31);
-  box-shadow: 0 0 32px rgb(87, 206, 81);
+  overflow: hidden;
+  margin: auto;
+  background: linear-gradient(#BC4C34, #A46845);
 }
-section {
-  padding: 10%;
+header a.logo {
   float: left;
-  border: 3% dashed rgb(30, 0, 54);
-
+  max-width: 66%;
+  text-decoration: none;
 }
-article {
-  border: 3px dashed rgb(87, 206, 81);
-  box-shadow: 0 0 32px rgb(87, 206, 81);
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(31, 31, 31);
+header p#info {
+  float: left;
+  text-align: justify;
+  overflow: hidden;
 }
-p {
-  padding: 5px;
+footer {
+  padding: 1.5%;
+  background: linear-gradient(#C6915D, #A46845);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
-ul, ol {
-  padding: 6px;
+footer h3{
+  font-size: 1em;
 }
-li {
-  display: block;
-  position: relative;
-  counter-increment: inst;
-  padding-left: 12px;
-  padding-top: 3px;
+header a h1 {
+  text-align: left;
+  font-size: 4vw;
+  color: #D0C9C2;
 }
-ul li::before {
-  content: "●";
-  padding-right: 14px;
+img.logo {
+  max-width: 12.5%;
+  max-height: 12.5%;
 }
-ol li::before {
-  content: counter(inst);
-  padding-right: 14px;
+body section#notifications article header {
+  border-radius: 15px;
+}
+body section#notifications article {
+  text-align: justify;
+  border: 3px solid #D0C9C2;
+  border-radius: 15px;
+  box-shadow: 0 0 5px #C6915D;
+}
+body section#notifications {
+  float: left;
+  width: 31%;
+  padding: 1%;
+}
+body section#menu {
+  float: left;
+  padding: 1%;
+  width: 65%;
 }

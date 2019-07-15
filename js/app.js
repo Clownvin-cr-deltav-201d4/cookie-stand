@@ -17,13 +17,13 @@ function makeShop(shopName, minCusts, maxCusts, avgPerCust) {
         return 0;
       }
       if (timeOfDay < 12) {
-        return Math.floor(minCusts + ((maxCusts - minCusts) * (Math.random() * ((timeOfDay - 5) / 6))));
+        return Math.round(minCusts + ((maxCusts - minCusts) * (Math.random() * ((timeOfDay - 5) / 6))));
       }
-      return Math.floor(minCusts + ((maxCusts - minCusts) * (Math.random() * ((19 - timeOfDay) / 8))));
+      return Math.round(minCusts + ((maxCusts - minCusts) * (Math.random() * ((19 - timeOfDay) / 8))));
     },
 
     cookiesPerHour: function (custs) {
-      return Math.floor(custs * this.avgPerCust);
+      return Math.round(custs * this.avgPerCust);
     },
 
     hourlyData: [],
