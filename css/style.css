@@ -30,7 +30,7 @@ header p#info {
 }
 footer {
   padding: 1%;
-  background: linear-gradient(#C6915D, #A46845);
+  background: linear-gradient(#36342B, #A46845);
   position: fixed;
   left: 0;
   bottom: 0;
@@ -85,4 +85,22 @@ body section#menu {
   padding-right: 3%;
   padding-left: 1.5%;
   width: 60%;
+}
+ul, ol {
+  padding: 6px;
+}
+li {
+  display: block;
+  position: relative;
+  counter-increment: inst;
+  padding-left: 12px;
+  padding-top: 3px;
+}
+ul li::before {
+  content: "●";
+  padding-right: 14px;
+}
+ol li::before {
+  content: counter(inst);
+  padding-right: 14px;
 }
