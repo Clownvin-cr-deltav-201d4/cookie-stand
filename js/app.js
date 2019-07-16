@@ -1,7 +1,9 @@
 'use strict';
 
 //I miss my factory function :(
+//Class notation sexy af tho.
 class Shop {
+
   constructor(shopName, minCusts, maxCusts, avgPerCust) {
     this.shopName = shopName;
     this.minCusts = minCusts;
@@ -45,7 +47,7 @@ class Shop {
     for (var i = 5; i < 20; i++) {
       innerList += `  <li>${(i % 12)+1}${i < 11 ? 'am' : 'pm'}: ${this.hourlyData[i].cookies} cookies</li>\n`;
     }
-    innerList += `  <li>Total: ${this.getCookiesSold()} cookies\n`;
+    innerList += `  <li>Total: ${this.getTotalCookiesSold()} cookies\n`;
 
     return `
     <p id="${this.shopName}-list">${this.shopName}</p>
@@ -76,7 +78,7 @@ var shops = [firstAndPike, seaTacAirport, seattleCenter, capitolHill, alki];
 /*Generate 24 hrs worth of data*/
 for (var i = 0; i < 24; i++) {
   shops.forEach((shop) => {
-    var custsThisHour = shop.custsPerHour(i);
-    shop.addHourlyData(i, custsThisHour, shop.cookiesPerHour(custsThisHour));
+    var custsThisHour = shop.estimateCustsForHour(i);
+    shop.addHourlyData(i, custsThisHour, shop.estimateCookies(custsThisHour));
   });
 }
