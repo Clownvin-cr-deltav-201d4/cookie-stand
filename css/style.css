@@ -23,6 +23,7 @@ header a.logo {
   padding: 1%;
 }
 header p#info {
+  color: #FFFFFF;
   padding: 1%;
   font-size: 1vw;
   float: left;
@@ -31,7 +32,7 @@ header p#info {
   font-family: 'Gothic A1', sans-serif;
 }
 a:link, a:visited {
-  color: #D0C9C2;
+  color: #FFFFFF;
 }
 footer {
   font-family: 'Gothic A1', sans-serif;
@@ -43,12 +44,13 @@ footer {
   width: 100%;
 }
 footer h3{
+  color: #FFFFFF;
   font-size: 1em;
 }
 header a h1 {
   text-align: left;
   font-size: 4vw;
-  color: #D0C9C2;
+  color: #eeac82;
   font-family: 'Lobster', cursive;
 }
 img.logo {
@@ -71,7 +73,7 @@ body section article {
   padding: 5px;
 }
 body section article header {
-  color: #D0C9C2;
+  color: #eeac82;
   border-radius: 15px 15px 0 0;
   border-bottom: 2px solid #BC4C34;
   padding: 3px;
