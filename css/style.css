@@ -1,5 +1,8 @@
 body {
-  background-color: #36342B;
+  /*background-color: #36342B;*/
+  background-color: #3c3c3c;
+  background-size:cover;
+  background-repeat: no-repeat;
   color: #D0C9C2;
   font-family: 'Patrick Hand', cursive;
 }
@@ -14,7 +17,7 @@ body {
 header {
   overflow: hidden;
   margin: auto;
-  background: linear-gradient(#BC4C34, #36342B);
+  background: linear-gradient(#BC4C34, rgba(0, 0, 0, 0));
 }
 header a.logo {
   float: left;
@@ -37,7 +40,7 @@ a:link, a:visited {
 footer {
   font-family: 'Gothic A1', sans-serif;
   padding: 1%;
-  background: linear-gradient(#36342B, #A46845);
+  background: linear-gradient(rgba(0, 0, 0, 0), #A46845);
   position: fixed;
   left: 0;
   bottom: 0;
@@ -68,7 +71,7 @@ body section article {
   background-color: #D0C9C2;
   color: #36342B;
   border-radius: 20px;
-  box-shadow: 0 0 15px #C6915D;
+  box-shadow: 0 0 60px #C6915D;
   margin-bottom: 3%;
   padding: 5px;
 }
@@ -140,4 +143,49 @@ body section#menu ul li {
 ol li::before {
   content: counter(inst);
   padding-right: 14px;
+}
+table#sales-report {
+  width: 100%;
+  height: 100%;
+}
+table#sales-report .heading, table#sales-report tr {
+  font-family: 'Anonymous Pro', monospace;
+  color: #f6f2f2;
+}
+table#sales-report .heading {
+  border: 1px solid #5d2607;
+  padding: 3px;
+  font-size: 1.55vw;
+}
+table#sales-report td {
+  border: 1px solid #5d2607;
+  padding: 3px;
+  font-size: 1vw;
+}
+table#sales-report tr {
+  background-color: #A46845;
+}
+table#sales-report th {
+  border: 1px solid #5d2607;
+}
+table#sales-report th, table#sales-report td, table#sales-report tr{
+  transition-duration: .5s;
+}
+table#sales-report tr:hover {
+  box-shadow: inset 0 0 10px #eeac82;
+}
+table#sales-report tr td:hover, table#sales-report tr th:hover {
+  box-shadow: inset 0 0 10px #eeac82;
+}
+table#sales-report tr:nth-child(2n + 2) {
+  background-color: #BC4C34;
+}
+table#sales-report tr:nth-child(2n + 2) td.location {
+  background-color: #4e4d4d;
+}
+table#sales-report tr:nth-child(2n + 1) td.location {
+  background-color: #747474;
+}
+table#sales-report tr th, table#sales-report #footer-label {
+  background-color: #f05829;
 }
