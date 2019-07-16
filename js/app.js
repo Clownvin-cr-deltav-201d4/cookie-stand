@@ -10,6 +10,7 @@
       this.minCusts = minCusts;
       this.maxCusts = maxCusts;
       this.avgPerCust = avgPerCust;
+
       this.hourlyData = [];
     }
 
@@ -19,9 +20,11 @@
         return 0;
       }
       if (hour < 12) {
-        return Math.round(this.minCusts + ((this.maxCusts - this.minCusts) * (Math.random() * ((hour - 5) / 6))));
+        return Math.round(this.minCusts + ((this.maxCusts - this.minCusts) *
+        (Math.random() * ((hour - 5) / 6))));
       }
-      return Math.round(this.minCusts + ((this.maxCusts - this.minCusts) * (Math.random() * ((19 - hour) / 8))));
+      return Math.round(this.minCusts + ((this.maxCusts - this.minCusts) *
+      (Math.random() * ((19 - hour) / 8))));
     }
 
     estimateCookies(customers) {
@@ -96,7 +99,9 @@
     var header = document.createElement('thead');
     var headerRow = document.createElement('tr');
 
-    var headings = ['Locations', '6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm', 'Totals'];
+    var headings = ['Locations', '6:00am', '7:00am', '8:00am', '9:00am',
+    '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm',
+    '5:00pm', '6:00pm', '7:00pm', '8:00pm', 'Totals'];
     headings.forEach((heading) => {
       var h = document.createElement('th');
       h.classList.add('heading');
