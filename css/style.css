@@ -1,6 +1,9 @@
 body {
   background-color: #36342B;
   color: #D0C9C2;
+  text-align: center;
+  align-items: center;
+  align-content: center;
 }
 /*Stupid clearfix...
   "Magic" solutions are
@@ -59,6 +62,8 @@ body section article {
   color: #36342B;
   border-radius: 20px;
   box-shadow: 0 0 15px #C6915D;
+  margin-bottom: 3%;
+  padding: 5px;
 }
 body section article header {
   color: #D0C9C2;
@@ -66,7 +71,7 @@ body section article header {
   border-bottom: 2px solid #BC4C34;
   padding: 3px;
   padding-bottom: 5px;
-  font-size: 2em;
+  font-size: 2vw;
   text-align: center;
 }
 body section article p {
@@ -86,6 +91,14 @@ body section#menu {
   padding-left: 1.5%;
   width: 60%;
 }
+body section#menu article.menu-item {
+  border-radius: 0;
+  display:inline-block;
+  text-align: center;
+  min-width: 128px;
+  min-height: 128px;
+  margin: 5px;
+}
 ul, ol {
   padding: 6px;
 }
@@ -99,6 +112,20 @@ li {
 ul li::before {
   content: "●";
   padding-right: 14px;
+}
+body section#menu ul {
+  text-align: center;
+}
+body section#menu ul li::before {
+  content: "";
+  padding: 0;
+}
+body section#menu ul li {
+  border-radius: 0;
+  display:inline-block;
+  text-align: center;
+  height: 100%;
+  padding: 0;
 }
 ol li::before {
   content: counter(inst);
