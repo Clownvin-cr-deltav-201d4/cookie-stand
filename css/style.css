@@ -1,5 +1,8 @@
 body {
-  background-color: #36342B;
+  /*background-color: #36342B;*/
+  background-image: url("http://www.southwestjournal.com/wp-content/uploads/2017/11/Minneapolis-Park-Recreation-Board-web.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
   color: #D0C9C2;
   font-family: 'Patrick Hand', cursive;
 }
@@ -14,7 +17,7 @@ body {
 header {
   overflow: hidden;
   margin: auto;
-  background: linear-gradient(#BC4C34, #36342B);
+  background: linear-gradient(#BC4C34, rgba(0, 0, 0, 0));
 }
 header a.logo {
   float: left;
@@ -37,7 +40,7 @@ a:link, a:visited {
 footer {
   font-family: 'Gothic A1', sans-serif;
   padding: 1%;
-  background: linear-gradient(#36342B, #A46845);
+  background: linear-gradient(rgba(0, 0, 0, 0), #A46845);
   position: fixed;
   left: 0;
   bottom: 0;
@@ -68,7 +71,7 @@ body section article {
   background-color: #D0C9C2;
   color: #36342B;
   border-radius: 20px;
-  box-shadow: 0 0 15px #C6915D;
+  box-shadow: 0 0 60px #C6915D;
   margin-bottom: 3%;
   padding: 5px;
 }
