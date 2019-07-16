@@ -30,6 +30,9 @@ header p#info {
   overflow: hidden;
   font-family: 'Gothic A1', sans-serif;
 }
+a:link, a:visited {
+  color: #D0C9C2;
+}
 footer {
   font-family: 'Gothic A1', sans-serif;
   padding: 1%;
