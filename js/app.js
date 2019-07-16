@@ -92,21 +92,62 @@
     });
   }
 
+  function createTableHeader() {
+    var header = document.createElement('thead');
+    var headerRow = document.createElement('tr');
+
+    var headings = ['Locations', '6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm', 'Totals'];
+    headings.forEach((heading) => {
+      var h = document.createElement('th');
+      h.classList.add('heading');
+      h.innerHTML = heading;
+      headerRow.appendChild(h);
+    });
+    header.appendChild(headerRow);
+    return header;
+  }
+
+  function createTableFooter() {
+    var footer = document.createElement('tfoot');
+    var footerRow = document.createElement('tr');
+    footerRow.id = 'footer';
+
+    var label = document.createElement('td');
+    label.id = 'footer-label';
+    label.innerHTML = 'Totals';
+
+    footerRow.appendChild(label);
+    var totals = [];
+    for (var i = 5; i < 20; i++) {
+      totals[i - 5] = 0;
+      shops.forEach((shop) => {
+        totals[i - 5] += shop.getHourlyData(i).cookies;
+      });
+    }
+    var totalTotals = 0;
+    shops.forEach((shop) => {
+      totalTotals += shop.getTotalCookiesSold();
+    });
+    totals[totals.length] = totalTotals;
+    totals.forEach((total) => {
+      var t = document.createElement('th');
+      t.innerHTML = total;
+      footerRow.appendChild(t);
+    });
+    footer.appendChild(footerRow);
+    return footer;
+  }
+
   var table = document.getElementById('sales-report');
-  var header = document.createElement('thead');
-  var headerRow = document.createElement('tr');
 
-  var headings = ['Location', '6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm', 'Total'];
-  headings.forEach((heading) => {
-    var h = document.createElement('th');
-    h.classList.add('heading');
-    h.innerHTML = heading;
-    headerRow.appendChild(h);
-  });
+  table.appendChild(createTableHeader());
 
-  header.appendChild(headerRow);
-  table.appendChild(header);
+  var body = document.createElement('tbody');
 
   shops.forEach((shop) => shop.render(table));
+
+  table.appendChild(body);
+
+  table.appendChild(createTableFooter());
 
 })();
