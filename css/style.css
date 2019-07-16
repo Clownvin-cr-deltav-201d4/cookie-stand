@@ -1,9 +1,7 @@
 body {
   background-color: #36342B;
   color: #D0C9C2;
-  text-align: center;
-  align-items: center;
-  align-content: center;
+  font-family: 'Patrick Hand', cursive;
 }
 /*Stupid clearfix...
   "Magic" solutions are
@@ -20,18 +18,24 @@ header {
 }
 header a.logo {
   float: left;
-  max-width: 66%;
+  max-width: 60%;
   text-decoration: none;
   padding: 1%;
 }
 header p#info {
+  color: #FFFFFF;
   padding: 1%;
   font-size: 1vw;
   float: left;
   text-align: justify;
   overflow: hidden;
+  font-family: 'Gothic A1', sans-serif;
+}
+a:link, a:visited {
+  color: #FFFFFF;
 }
 footer {
+  font-family: 'Gothic A1', sans-serif;
   padding: 1%;
   background: linear-gradient(#36342B, #A46845);
   position: fixed;
@@ -40,12 +44,14 @@ footer {
   width: 100%;
 }
 footer h3{
+  color: #FFFFFF;
   font-size: 1em;
 }
 header a h1 {
   text-align: left;
   font-size: 4vw;
-  color: #D0C9C2;
+  color: #eeac82;
+  font-family: 'Lobster', cursive;
 }
 img.logo {
   max-width: 20%;
@@ -53,6 +59,7 @@ img.logo {
   padding-right: 1%;
 }
 body section header {
+  font-family: 'Lobster', cursive;
   background: linear-gradient(#BC4C34, #A46845);
 }
 body section article {
@@ -66,7 +73,7 @@ body section article {
   padding: 5px;
 }
 body section article header {
-  color: #D0C9C2;
+  color: #eeac82;
   border-radius: 15px 15px 0 0;
   border-bottom: 2px solid #BC4C34;
   padding: 3px;
@@ -121,11 +128,14 @@ body section#menu ul li::before {
   padding: 0;
 }
 body section#menu ul li {
-  border-radius: 0;
+  border-radius: 20px;
   display:inline-block;
   text-align: center;
-  height: 100%;
+  width: 30%;
+  min-height: 64px;
   padding: 0;
+  border: 2px solid #BC4C34;
+  margin-bottom: 4px;
 }
 ol li::before {
   content: counter(inst);

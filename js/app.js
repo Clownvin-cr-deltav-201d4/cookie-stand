@@ -50,7 +50,7 @@ function makeShop(shopName, minCusts, maxCusts, avgPerCust) {
       return `
       <p id="${this.shopName}-list">${this.shopName}</p>
       <ul>
-        ${innerList}
+      ${innerList}
       </ul>
       `;
     }
@@ -74,12 +74,10 @@ var alki = makeShop('Alki', 2, 16, 4.6);
 
 var shops = [firstAndPike, seaTacAirport, seattleCenter, capitolHill, alki];
 
+/*Generate 24 hrs worth of data*/
 for (var i = 0; i < 24; i++) {
   shops.forEach((shop) => {
     var custsThisHour = shop.custsPerHour(i);
     shop.addHourlyData(i, custsThisHour, shop.cookiesPerHour(custsThisHour));
   });
 }
-
-console.log(firstAndPike);
-console.log(firstAndPike.createList());
