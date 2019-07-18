@@ -145,8 +145,7 @@ ol li::before {
   padding-right: 14px;
 }
 table#sales-report {
-  width: 100%;
-  height: 100%;
+  margin: 1%;
 }
 table#sales-report .heading, table#sales-report tr {
   font-family: 'Anonymous Pro', monospace;
@@ -155,7 +154,7 @@ table#sales-report .heading, table#sales-report tr {
 table#sales-report .heading {
   border: 1px solid #5d2607;
   padding: 3px;
-  font-size: 1.55vw;
+  font-size: 1.2vw;
 }
 table#sales-report td {
   border: 1px solid #5d2607;
