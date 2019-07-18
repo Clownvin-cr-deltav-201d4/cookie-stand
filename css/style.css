@@ -144,9 +144,31 @@ ol li::before {
   content: counter(inst);
   padding-right: 14px;
 }
+#create-store {
+  max-width: 250px;
+  margin: 1% auto;
+  text-align: center;
+  border: 2px solid #BC4C34;
+  background-color: #D0C9C2;
+  color: #36342B;
+  border-radius: 20px;
+  box-shadow: 0 0 60px #C6915D;
+  margin-bottom: 3%;
+  padding: 5px;
+}
+#create-store fieldset {
+  margin: 1%;
+  text-align: center;
+}
+#create-store input {
+  margin: .5%;
+}
+#create-store #store-error {
+  color: #9C310A;
+}
 table#sales-report {
-  width: 100%;
-  height: 100%;
+  margin: 1%;
+  margin: 0 auto;
 }
 table#sales-report .heading, table#sales-report tr {
   font-family: 'Anonymous Pro', monospace;
@@ -155,7 +177,7 @@ table#sales-report .heading, table#sales-report tr {
 table#sales-report .heading {
   border: 1px solid #5d2607;
   padding: 3px;
-  font-size: 1.55vw;
+  font-size: 1.2vw;
 }
 table#sales-report td {
   border: 1px solid #5d2607;
