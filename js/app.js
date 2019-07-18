@@ -22,6 +22,20 @@
       return article;
     }
 
+    function createProductArticle(product) {
+      var article = document.createElement('article');
+      article.classList.add('menu-item');
+      var header = document.createElement('header');
+      var h3 = document.createElement('h3');
+      h3.textContent = product.name;
+      header.appendChild(h3);
+      article.appendChild(header);
+      var p = document.createElement('p');
+      p.textContent = product.description;
+      article.appendChild(p);
+      return article;
+    }
+
     var clearfix = document.createElement('div');
     clearfix.classList.add('clearfix');
     //Notifications
@@ -40,70 +54,34 @@
 
     //Menu
     section = document.createElement('section');
-    section.id = 'menu';
+    var menu = document.createElement('article');
+    menu.id = 'menu';
+
+    class Product {
+      constructor(name, description, picture = '') {
+        this.name = name;
+        this.description = description;
+        this.picture = picture;
+      }
+    }
+
+    const PRODUCTS = [
+      new Product('Salmon Cookie', 'Our specialty! Made with love, fresh every day.'),
+      new Product('Sturgeon Cookie', 'Made from only the finest quality Tuna from the Berring Straight.'),
+      new Product('Caviar Cookie', 'North-atlantic sturgeon caviar provides a savory flavor you just can\'t beat!'),
+      new Product('Trout Cookie', 'Wild-caught Alaskan Trout with a hint of Ginger?'),
+      new Product('Bass Cookie', 'Bass Pro Fishermen rejoice! This succulent sweet will have you back to 100% in no time!'),
+      new Product('Carp Cookie', 'You know what a carp is? Then you know that these cookies are actually pretty gross...'),
+      new Product('Betafish Cookie', 'It\'s like M&M cookies, except with colorful fish instead of chocolate candies.'),
+      new Product('Mackeral Cookie', 'Deep from the depths of the ocean, we bring you this delectable delight.'),
+      new Product('Squid Cookie', 'Very popular in Japan, this cookie might still be wriggling after purchase!')
+    ];
+
+    PRODUCTS.forEach((product) => menu.appendChild(createProductArticle(product)));
 
     //Am lazy, could have broken up into factory functions, like for notifications..
-    section.appendChild(createTextArticle('Menu', `<ul>
-      <li class="menu-item">
-        <header>
-          <h3>Salmon Cookie</h3>
-        </header>
-        <p>Our specialty! Made with love, fresh every day.</p>
-      </li>
-      <li class="menu-item">
-        <header>
-          <h3>Tuna Cookie</h3>
-        </header>
-        <p>Made from only the finest quality Tuna from the Berring Straight.</p>
-      </li>
-      <li class="menu-item">
-        <header>
-          <h3>Caviar Cookie</h3>
-        </header>
-        <p>North-atlantic sturgeon caviar provides a savory flavor you just can't beat!</p>
-      </li>
-      <br>
-      <li class="menu-item">
-        <header>
-          <h3>Trout Cookie</h3>
-        </header>
-        <p>Wild-caught Alaskan Trout with a hint of Ginger?</p>
-      </li>
-      <li class="menu-item">
-        <header>
-          <h3>Bass Cookie</h3>
-        </header>
-        <p>Bass Pro Fishermen rejoice! This succulent sweet will have you back to 100% in no time!</p>
-      </li>
-      <li class="menu-item">
-        <header>
-          <h3>Carp Cookie</h3>
-        </header>
-        <p>You know what a carp is? Then you know that these cookies are actually pretty gross...</p>
-      </li>
-    </br>
-    <li class="menu-item">
-      <header>
-        <h3>Betafish Cookie</h3>
-      </header>
-      <p>It's like M&M cookies, except with colorful fish instead of chocolate candies.</p>
-    </li>
-    <li class="menu-item">
-      <header>
-        <h3>Mackeral Cookie</h3>
-      </header>
-      <p>Deep from the depths of the ocean, we bring you this delectable delight.</p>
-    </li>
-    <li class="menu-item">
-      <header>
-        <h3>Squid Cookie</h3>
-      </header>
-      <p>Very popular in Japan, this cookie might still be wriggling after purchase!</p>
-    </li>
-    </ul>`));
-
-    clearfix.appendChild(section);
-
+    section.appendChild(menu);
+    clearfix.appendChild(menu);
     return clearfix;
   })();
 
@@ -375,6 +353,12 @@
 
     return salesContent;
   })();
+
+  /*
+  var aboutContent = (() => {
+    var about = document.createElement('');
+  })();
+  */
 
   /*
   <a id='home' href=''>Home</a>
