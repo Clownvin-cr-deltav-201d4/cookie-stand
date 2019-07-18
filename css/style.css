@@ -162,52 +162,54 @@ ol li::before {
 }
 #create-store input {
   margin: .5%;
+  margin-bottom: 5%;
 }
 #create-store #store-error {
   color: #9C310A;
 }
-table#sales-report {
+table {
   margin: 1%;
   margin: 0 auto;
+  margin-bottom: 5%;
 }
-table#sales-report .heading, table#sales-report tr {
+table .heading, table tr {
   font-family: 'Anonymous Pro', monospace;
   color: #f6f2f2;
 }
-table#sales-report .heading {
+table .heading {
   border: 1px solid #5d2607;
   padding: 3px;
   font-size: 1.2vw;
 }
-table#sales-report td {
+table td {
   border: 1px solid #5d2607;
   padding: 3px;
   font-size: 1vw;
 }
-table#sales-report tr {
+table tr {
   background-color: #A46845;
 }
-table#sales-report th {
+table th {
   border: 1px solid #5d2607;
 }
-table#sales-report th, table#sales-report td, table#sales-report tr{
+table th, table td, table tr{
   transition-duration: .5s;
 }
-table#sales-report tr:hover {
+table tr:hover {
   box-shadow: inset 0 0 10px #eeac82;
 }
-table#sales-report tr td:hover, table#sales-report tr th:hover {
+table tr td:hover, table tr th:hover {
   box-shadow: inset 0 0 10px #eeac82;
 }
-table#sales-report tr:nth-child(2n + 2) {
+table tr:nth-child(2n + 2) {
   background-color: #BC4C34;
 }
-table#sales-report tr:nth-child(2n + 2) td.location {
+table tr:nth-child(2n + 2) td.location {
   background-color: #4e4d4d;
 }
-table#sales-report tr:nth-child(2n + 1) td.location {
+table tr:nth-child(2n + 1) td.location {
   background-color: #747474;
 }
-table#sales-report tr th, table#sales-report #footer-label {
+table tr th, table #footer-label {
   background-color: #f05829;
 }
