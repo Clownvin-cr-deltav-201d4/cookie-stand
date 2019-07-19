@@ -43,12 +43,14 @@
     section.id = 'notifications';
     //Article 1
     section.appendChild(createTextArticle('New Location Opening', `We're pleased to announce the grand opening of a new Pat's Salmon Cookies branch, Alki!<br><br>
-      Alki is located in the small town of Tokyo, with only a population of 3, but that's not stopping them
-      from dreaming big!`));
+    Alki is located in the small town of Tokyo, with only a population of 3, but that's not stopping them
+    from dreaming big!<img src='img/family.jpg'>`));
     //Article 2
     section.appendChild(createTextArticle('New Salmon Supplier', `Thanks to a lucky accident in the gulf of mexico, we have had to change our salmon supplier. Our new Supplier
-      is a Japanese company called "Gotta Catch em All", and they pride themselves on catching every last Salmon in existence.
-      Needless to say, we've got plently of Salmon to turn into cookies, and it's higher quality now. Or whatever.`));
+    is a Japanese company called "Gotta Catch em All", and they pride themselves on catching every last Salmon in existence.
+    Needless to say, we've got plently of Salmon to turn into cookies, and it's higher quality now. Or whatever. <img src="img/fish.jpg">`));
+    section.appendChild(createTextArticle('T-Shirts!', 'We\'ve got T-Shirts now! Order on our store page! <img src="img/shirt.jpg">'));
+    section.appendChild(createTextArticle('Picture of a cookie cutter', 'Here\'s a picture of a cookie cutter... and the subsequent cookie. <img src="img/cutter.jpeg"><img src="img/frosted-cookie.jpg">'));
     //Append notifications
     clearfix.appendChild(section);
 
@@ -300,7 +302,7 @@
       ]));
       var error = document.createElement('p');
       error.id = 'store-error';
-      fieldset.appendChild(error)
+      fieldset.appendChild(error);
     });
     salesForm.addEventListener('submit', (event) => {
       event.preventDefault();
@@ -353,19 +355,6 @@
 
     return salesContent;
   })();
-
-  /*
-  var aboutContent = (() => {
-    var about = document.createElement('');
-  })();
-  */
-
-  /*
-  <a id='home' href=''>Home</a>
-  <a id='about' href=''>About Us</a>
-  <a id='merch' href=''>Merchandise</a>
-  <a id='sales' href=''>Sales</a>
-  */
 
   document.querySelector('nav #home').addEventListener('click', (event) => {
     event.preventDefault();
