@@ -14,6 +14,15 @@ body {
   clear: both;
   display: table;
 }
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+article img {
+  padding: 5%;
+  max-width: 90%;
+  max-height: 90%;
+}
 header {
   overflow: hidden;
   margin: auto;
@@ -61,12 +70,12 @@ img.logo {
   max-height: 20%;
   padding-right: 1%;
 }
-body section header {
+body section header, article.menu-item header {
   font-family: 'Lobster', cursive;
   background: linear-gradient(#BC4C34, #A46845);
 }
 body section article {
-  text-align: justify;
+  text-align: left;
   border: 2px solid #BC4C34;
   background-color: #D0C9C2;
   color: #36342B;
@@ -75,7 +84,7 @@ body section article {
   margin-bottom: 3%;
   padding: 5px;
 }
-body section article header {
+body section article header, article.menu-item header {
   color: #eeac82;
   border-radius: 15px 15px 0 0;
   border-bottom: 2px solid #BC4C34;
@@ -94,55 +103,26 @@ body section#notifications {
   padding-left: 3%;
   padding-right: 1.5%;
 }
-body section#menu {
+body article#menu {
   float: left;
   padding-top: 3%;
   padding-right: 3%;
   padding-left: 1.5%;
   width: 60%;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
-body section#menu article.menu-item {
+body article#menu article.menu-item {
   border-radius: 0;
-  display:inline-block;
   text-align: center;
-  min-width: 128px;
-  min-height: 128px;
   margin: 5px;
-}
-ul, ol {
-  padding: 6px;
-}
-li {
-  display: block;
-  position: relative;
-  counter-increment: inst;
-  padding-left: 12px;
-  padding-top: 3px;
-}
-ul li::before {
-  content: "●";
-  padding-right: 14px;
-}
-body section#menu ul {
-  text-align: center;
-}
-body section#menu ul li::before {
-  content: "";
-  padding: 0;
-}
-body section#menu ul li {
-  border-radius: 20px;
-  display:inline-block;
-  text-align: center;
-  width: 30%;
-  min-height: 64px;
-  padding: 0;
   border: 2px solid #BC4C34;
-  margin-bottom: 4px;
-}
-ol li::before {
-  content: counter(inst);
-  padding-right: 14px;
+  background-color: #D0C9C2;
+  color: #36342B;
+  border-radius: 20px;
+  box-shadow: 0 0 60px #C6915D;
+  margin-bottom: 3%;
+  padding: 5px;
 }
 #create-store {
   max-width: 250px;
@@ -162,52 +142,54 @@ ol li::before {
 }
 #create-store input {
   margin: .5%;
+  margin-bottom: 5%;
 }
 #create-store #store-error {
   color: #9C310A;
 }
-table#sales-report {
+table {
   margin: 1%;
   margin: 0 auto;
+  margin-bottom: 5%;
 }
-table#sales-report .heading, table#sales-report tr {
+table .heading, table tr {
   font-family: 'Anonymous Pro', monospace;
   color: #f6f2f2;
 }
-table#sales-report .heading {
+table .heading {
   border: 1px solid #5d2607;
   padding: 3px;
   font-size: 1.2vw;
 }
-table#sales-report td {
+table td {
   border: 1px solid #5d2607;
   padding: 3px;
   font-size: 1vw;
 }
-table#sales-report tr {
+table tr {
   background-color: #A46845;
 }
-table#sales-report th {
+table th {
   border: 1px solid #5d2607;
 }
-table#sales-report th, table#sales-report td, table#sales-report tr{
+table th, table td, table tr{
   transition-duration: .5s;
 }
-table#sales-report tr:hover {
+table tr:hover {
   box-shadow: inset 0 0 10px #eeac82;
 }
-table#sales-report tr td:hover, table#sales-report tr th:hover {
+table tr td:hover, table tr th:hover {
   box-shadow: inset 0 0 10px #eeac82;
 }
-table#sales-report tr:nth-child(2n + 2) {
+table tr:nth-child(2n + 2) {
   background-color: #BC4C34;
 }
-table#sales-report tr:nth-child(2n + 2) td.location {
+table tr:nth-child(2n + 2) td.location {
   background-color: #4e4d4d;
 }
-table#sales-report tr:nth-child(2n + 1) td.location {
+table tr:nth-child(2n + 1) td.location {
   background-color: #747474;
 }
-table#sales-report tr th, table#sales-report #footer-label {
+table tr th, table #footer-label {
   background-color: #f05829;
 }
